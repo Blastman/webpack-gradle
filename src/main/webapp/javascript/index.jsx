@@ -1,8 +1,7 @@
 import ReactDOM from 'react-dom';
 import React from 'react';
 import Table from './table';
-
-require('../css/general.css');
+import '../css/general.css';
 
 ReactDOM.render(
   <div>
