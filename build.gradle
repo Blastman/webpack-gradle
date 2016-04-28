@@ -61,8 +61,13 @@ task wrapper(type: Wrapper) {
   gradleVersion = '2.12'
 }
 
+import org.apache.tools.ant.taskdefs.condition.Os
 task webpack(type: NodeTask, dependsOn: 'npmInstall') {
-  script = project.file('node_modules/.bin/webpack')
+  if(Os.isFamily(Os.FAMILY_WINDOWS)) {
+    script = project.file('node_modules/webpack/bin/webpack.js')
+  } else {
+    script = project.file('node_modules/.bin/webpack')
+  }
 }
 
 processResources.dependsOn 'webpack'
