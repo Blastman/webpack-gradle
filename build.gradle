@@ -61,9 +61,9 @@ task wrapper(type: Wrapper) {
   gradleVersion = '2.12'
 }
 
-import org.apache.tools.ant.taskdefs.condition.Os
 task webpack(type: NodeTask, dependsOn: 'npmInstall') {
-  if(Os.isFamily(Os.FAMILY_WINDOWS)) {
+  def osName = System.getProperty("os.name").toLowerCase();
+  if (osName.contains("windows")) {
     script = project.file('node_modules/webpack/bin/webpack.js')
   } else {
     script = project.file('node_modules/.bin/webpack')
