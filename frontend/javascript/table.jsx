@@ -11,7 +11,8 @@ export default class Table extends Component {
       <div className="table">
         <div className="table-title">Table {number}</div>
         {seatNumbers.map(seatNumber => {
-          return <Seat key={seatNumber} number={seatNumber}
+          return <Seat key={seatNumber}
+                       number={seatNumber}
                        open={openSeats.indexOf(seatNumber) === -1}/>;
         })}
       </div>

@@ -1,9 +1,7 @@
 var path = require('path');
 var webpack = require('webpack')
-// var ROOT = path.resolve(__dirname, 'src/main/resources/static');
-var ROOT = path.resolve(__dirname, 'src/main/webapp');
+var ROOT = path.resolve(__dirname, 'frontend');
 var SRC = path.resolve(ROOT, 'javascript');
-// var DEST = path.resolve(__dirname, 'src/main/resources/static/dist');
 var DEST = path.resolve(__dirname, 'src/main/webapp/dist');
 
 module.exports = {
