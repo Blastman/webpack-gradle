@@ -4,7 +4,7 @@
 # so that javascript files can be automatically reloaded when they are saved.
 # The version of node must match what's in gradle.
 
-NODE_VERSION="5.8.0"
+NODE_VERSION="6.11.1"
 NODE_LOC="./.gradle/nodejs/node-v${NODE_VERSION}-darwin-x64/bin/node"
 
 chmod u+x ${NODE_LOC}

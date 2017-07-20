@@ -12,11 +12,12 @@ module.exports = {
     app: SRC + '/index.jsx',
   },
   resolve: {
-    root: [
+    modules: [
       path.resolve(ROOT, 'javascript'),
-      path.resolve(ROOT, 'css')
+      path.resolve(ROOT, 'css'),
+      "node_modules"
     ],
-    extensions: ['', '.js', '.jsx']
+    extensions: ['.js', '.jsx']
   },
   output: {
     path: DEST,
